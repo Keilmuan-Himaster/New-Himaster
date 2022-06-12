@@ -995,7 +995,8 @@
                 </div>
 
             </div>
-        </section><!-- End Portfolio Section -->
+        </section>
+        <!-- End Portfolio Section -->
 
         <!-- ======= Team Section ======= -->
         <section id="team" class="team">

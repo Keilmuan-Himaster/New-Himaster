@@ -13,10 +13,10 @@
 
                 <li><a class="nav-link scrollto" href="{{url('')}}">Home</a></li>
                 <li><a class="nav-link scrollto" href="{{url('structure')}}">Struktur</a></li>
-                <li><a class="nav-link scrollto" href="index.html#services">Berita</a></li>
-                <li><a class="nav-link scrollto" href="index.html#portfolio">Galeri</a></li>
+                <li><a class="nav-link scrollto" href="{{url('blog')}}">Berita</a></li>
+                <li><a class="nav-link scrollto" href="{{url('gallery')}}">Galeri</a></li>
                 <li><a class="nav-link scrollto" href="index.html#portfolio">Buletin</a></li>
-                <li><a class="nav-link scrollto" href="http://portal.himaster.id/">Portal Himaster</a></li>
+                <li><a class="nav-link scrollto" href="http://portal.himaster.id/" target="_blank">Portal Himaster</a></li>
                 {{-- <li><a href="blog.html">Blog</a></li>
       <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
         <ul>

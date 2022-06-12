@@ -28,24 +28,17 @@
     <link href="{{ asset('frontend/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-    <link href="{{ asset('frontend/assets/css/variables.css') }}" rel="stylesheet">
+     {{-- Variables CSS Files. Uncomment your preferred color scheme  --}}
+    {{-- <link href="{{ asset('frontend/assets/css/variables.css') }}" rel="stylesheet"> --}}
     {{-- <link href="{{asset('frontend/assets/css/variables-blue.css')}}" rel="stylesheet"> --}}
-    <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+    {{-- <link href="{{asset('frontend/assets/css/variables-green.css')}}" rel="stylesheet"> --}}
+    {{-- <link href="{{asset('frontend/assets/css/variables-orange.css')}}" rel="stylesheet"> --}}
+    <link href="{{asset('frontend/assets/css/variables-purple.css')}}" rel="stylesheet">
+    {{-- <link href="{{asset('frontend/assets/css/variables-red.css')}}" rel="stylesheet"> --}}
+    {{-- <link href="{{asset('frontend/assets/css/variables-pink.css')}}" rel="stylesheet"> --}}
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('frontend/assets/css/main.css') }}" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: HeroBiz - v2.1.0
-  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>

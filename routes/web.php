@@ -56,3 +56,12 @@ Route::get('/structure', function () {
 Route::get('/structure/kaderisasi', function () {
     return view('frontend.structure.members.index');
 });
+Route::get('/blog', function () {
+    return view('frontend.blog.index');
+});
+Route::get('/blog/berita', function () {
+    return view('frontend.blog.single-page.index');
+});
+Route::get('/gallery',function(){
+    return view('frontend.gallery.index');
+});
