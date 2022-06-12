@@ -48,8 +48,11 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.home.index');
 });
-Route::get('/home', function () {
-    return view('welcome');
+Route::get('/structure', function () {
+    return view('frontend.structure.index');
+});
+Route::get('/structure/kaderisasi', function () {
+    return view('frontend.structure.members.index');
 });
