@@ -1,6 +1,22 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Galeri</h2>
+                <ol>
+                    <li><a href="{{ url('') }}">Home</a></li>
+                    <li>Galeri</li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio" data-aos="fade-up">
 
@@ -29,8 +45,7 @@
                 <div class="row g-0 portfolio-container">
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="{{ asset('frontend/assets/img/portfolio/app-1.jpg') }}" class="img-fluid"
-                            alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/app-1.jpg') }}" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>App 1</h4>
                             <a href="{{ 'assets/img/portfolio/app-1.jpg' }}" title="App 1"
@@ -42,8 +57,8 @@
                     </div><!-- End Portfolio Item -->
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-                        <img src="{{ asset('frontend/assets/img/portfolio/product-1.jpg') }}"
-                            class="img-fluid" alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/product-1.jpg') }}" class="img-fluid"
+                            alt="">
                         <div class="portfolio-info">
                             <h4>Product 1</h4>
                             <a href="{{ 'assets/img/portfolio/product-1.jpg' }}" title="Product 1"
@@ -55,8 +70,8 @@
                     </div><!-- End Portfolio Item -->
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-                        <img src="{{ asset('frontend/assets/img/portfolio/branding-1.jpg') }}"
-                            class="img-fluid" alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/branding-1.jpg') }}" class="img-fluid"
+                            alt="">
                         <div class="portfolio-info">
                             <h4>Branding 1</h4>
                             <a href="{{ 'assets/img/portfolio/branding-1.jpg' }}" title="Branding 1"
@@ -68,8 +83,7 @@
                     </div><!-- End Portfolio Item -->
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
-                        <img src="{{ asset('frontend/assets/img/portfolio/books-1.jpg') }}" class="img-fluid"
-                            alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/books-1.jpg') }}" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>Books 1</h4>
                             <a href="{{ 'assets/img/portfolio/books-1.jpg' }}" title="Branding 1"
@@ -81,8 +95,7 @@
                     </div><!-- End Portfolio Item -->
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="{{ asset('frontend/assets/img/portfolio/app-2.jpg') }}" class="img-fluid"
-                            alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/app-2.jpg') }}" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>App 2</h4>
                             <a href="{{ 'assets/img/portfolio/app-2.jpg' }}" title="App 2"
@@ -94,8 +107,8 @@
                     </div><!-- End Portfolio Item -->
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-                        <img src="{{ asset('frontend/assets/img/portfolio/product-2.jpg') }}"
-                            class="img-fluid" alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/product-2.jpg') }}" class="img-fluid"
+                            alt="">
                         <div class="portfolio-info">
                             <h4>Product 2</h4>
                             <a href="{{ 'assets/img/portfolio/product-2.jpg' }}" title="Product 2"
@@ -107,8 +120,8 @@
                     </div><!-- End Portfolio Item -->
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-                        <img src="{{ asset('frontend/assets/img/portfolio/branding-2.jpg') }}"
-                            class="img-fluid" alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/branding-2.jpg') }}" class="img-fluid"
+                            alt="">
                         <div class="portfolio-info">
                             <h4>Branding 2</h4>
                             <a href="{{ 'assets/img/portfolio/branding-2.jpg' }}" title="Branding 2"
@@ -133,8 +146,7 @@
                     </div><!-- End Portfolio Item -->
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-                        <img src="{{ asset('frontend/assets/img/portfolio/app-3.jpg') }}" class="img-fluid"
-                            alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/app-3.jpg') }}" class="img-fluid" alt="">
                         <div class="portfolio-info">
                             <h4>App 3</h4>
                             <a href="{{ 'assets/img/portfolio/app-3.jpg' }}" title="App 3"
@@ -146,8 +158,8 @@
                     </div><!-- End Portfolio Item -->
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-                        <img src="{{ asset('frontend/assets/img/portfolio/product-3.jpg') }}"
-                            class="img-fluid" alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/product-3.jpg') }}" class="img-fluid"
+                            alt="">
                         <div class="portfolio-info">
                             <h4>Product 3</h4>
                             <a href="{{ 'assets/img/portfolio/product-3.jpg' }}" title="Product 3"
@@ -159,8 +171,8 @@
                     </div><!-- End Portfolio Item -->
 
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-                        <img src="{{ asset('frontend/assets/img/portfolio/branding-3.jpg') }}"
-                            class="img-fluid" alt="">
+                        <img src="{{ asset('frontend/assets/img/portfolio/branding-3.jpg') }}" class="img-fluid"
+                            alt="">
                         <div class="portfolio-info">
                             <h4>Branding 3</h4>
                             <a href="{{ 'assets/img/portfolio/branding-3.jpg' }}" title="Branding 2"

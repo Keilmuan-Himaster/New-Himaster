@@ -65,3 +65,6 @@ Route::get('/blog/berita', function () {
 Route::get('/gallery',function(){
     return view('frontend.gallery.index');
 });
+Route::get('/buletin', function () {
+    return view('frontend.buletin.index');
+});
