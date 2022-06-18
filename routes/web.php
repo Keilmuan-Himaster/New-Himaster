@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\backend\BeritaController;
+use App\Http\Controllers\backend\BusterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExampleController;
+use App\Http\Controllers\backend\master_data\TagController;
+use App\Http\Controllers\backend\master_data\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,26 +23,11 @@ Route::prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         return view('example.dashboard');
     })->name('dashboard');
-    Route::get('/form', [ExampleController::class, 'index'])->name('form');
-    Route::get('/formjquery', [ExampleController::class, 'viewFormJquery'])->name('form.jquery');
-    Route::post('/form/store', [ExampleController::class, 'store'])->name('form.store');
-    Route::post('/form/store/jquery', [ExampleController::class, 'storejquery'])->name('form.jquery.store');
-    Route::get('/quill', function () {
-        return view('example.quill');
-    })->name('quill');
-    Route::get('/datatables',[ExampleController::class, 'view'])->name('datatables');
-    Route::get('/chartapexjs', function () {
-        return view('example.chart');
-    })->name('chartapexjs');
-    // end example
-    Route::get('rat/list', [App\Http\Controllers\Admin\ManajemenPerencanaan\RATController::class,'list'])->name('rat.list');
     // do coding
-    Route::resource('assign-assessment',App\Http\Controllers\Admin\RiskAssessment\AssignAssessmentController::class);
-    Route::resource('assessment',App\Http\Controllers\Admin\RiskAssessment\AssessmentController::class);
-    Route::resource('review-pka',App\Http\Controllers\Admin\RiskAssessment\ReviewPKAController::class);
-    Route::resource('rat',App\Http\Controllers\Admin\ManajemenPerencanaan\RATController::class);
-    Route::resource('rap',App\Http\Controllers\Admin\ManajemenPerencanaan\RAPController::class);
-    Route::resource('perencanaan-audit',App\Http\Controllers\Admin\ManajemenAudit\PerencanaanAuditController::class);
+    Route::resource('berita', BeritaController::class);
+    Route::resource('tag', TagController::class);
+    Route::resource('kategori', KategoriController::class);
+    Route::Resource('buster', BusterController::class);
 });
 
 Route::get('/dashboard', function () {
