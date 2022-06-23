@@ -68,9 +68,13 @@ class BusterController extends Controller
         //
     }
 
-    public function destroy(Buster $buster)
+    public function destroy($id)
     {
-        $buster->delete();
+        $data = Buster::find($id);
+        if(Storage::exists($data->link)){
+            Storage::delete($data->link);
+          }
+        Buster::find($id)->delete();
         return response()->json(['message', 'deleted success']);
 
     }

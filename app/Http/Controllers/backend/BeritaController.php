@@ -7,7 +7,9 @@ use App\Models\Category;
 use App\Models\Content;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image as Img;
 use Yajra\DataTables\Facades\DataTables;
 
 class BeritaController extends Controller
@@ -41,25 +43,24 @@ class BeritaController extends Controller
                   return $name;
                })
                ->addColumn('gambar', function ($content){
-                    $link = asset('storage/'.$content->files);
-                    return '<img src="'.$link.'" alt="kosong">';
+                    $gambar = 'berita.index';
+                    return '<a href="/admin/berita/show/'.$content->id .'" class="edit btn btn-success btn-sm"><i class="bi bi-card-image"></i></a>';
 
                })
                ->addColumn('action', function ($content) {
-                  return '
-
-                                <a class="btn btn-danger btn-sm"  onclick="deleteItem(' . $content->id . ')"><i class="fa fa-trash"></i></span></a>
-                                <a class="btn btn-info btn-sm" onclick="editItem(' . $content->id . ')"><i class="fa fa-pencil"></i></span></a>
-                                ';
+                    return '
+                            <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $content->id . '" data-original-title="Edit" class="edit btn btn-info btn-sm editProduct"><i class="fa fa-pencil-square-o"></i></a>
+                            <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $content->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct"><i class="fa fa-trash"></i></a>
+                    ';
                })
                ->addColumn('status', function ($content) {
                   if ($content->status == true) {
                      return '
-                              <p class="btn btn-success btn-trans btn-sm" >Published</span></a>
+                              <a class="btn btn-success btn-trans btn-sm" >Published</span></a>
                            ';
                   } else {
                      return '
-                        <p class="btn btn-warning btn-trans btn-sm" >Draft</span></a>
+                        <a class="btn btn-warning btn-trans btn-sm" >Draft</span></a>
                            ';
                   }
                })
@@ -106,8 +107,23 @@ class BeritaController extends Controller
                 ]
             );
         $data->tags()->attach($request->tag_id);
+// dd(Category::find($data->category_id)->name);
+        $path = null;
+        if ($request->gambar) {
+            $name_picture = $request->judul . ' '. Str::random(6) .'.webp';
+            $picture = Img::make($request->gambar)->resize(null, 1000, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->encode('webp', 100);
+            $namePath =  $namePath = strtolower(Category::find($data->category_id)->name);
+            $path = $namePath . "/" . $name_picture;
+            Storage::put("public/" . $path, $picture);
 
+            if ($path != null) {
+                $data->files()->updateOrcreate(['type' => 'image', 'link' => $path]);
+            }
 
+        }
         return $data;
 
     }
@@ -120,7 +136,13 @@ class BeritaController extends Controller
      */
     public function show($id)
     {
-        //
+        $get = Content::find($id);
+        // dd($get);
+        $data = $get->files;
+        // $data = Gambar::where('gambars_id',$id)->where('gambars_type', 'App\Models\Berita')->get();
+        // dd($data);
+        $title = $get->judul;
+        return view('backend.berita.gambar', compact(['data','title']));
     }
 
     /**
@@ -131,7 +153,8 @@ class BeritaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Content::find($id);
+        return $data;
     }
 
     /**
@@ -154,6 +177,6 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Content::find($id);
     }
 }

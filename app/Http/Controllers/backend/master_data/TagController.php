@@ -21,11 +21,11 @@ class TagController extends Controller
         if ($request->ajax()) {
             $tags = Tag::latest()->get();
             return DataTables::of($tags)
-                ->addColumn('action', function ($tag) {
+                ->addColumn('action', function ($content) {
                     return '
-                             <a class="btn btn-danger btn-sm"  onclick="deleteItem(' . $tag->id . ')"><i class="fa fa-trash"></i></span></a>
-                             <a class="btn btn-info btn-sm" onclick="editItem(' . $tag->id . ')"><i class="fa fa-pencil"></i></span></a>
-                             ';
+                        <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $content->id . '" data-original-title="Edit" class="edit btn btn-info btn-sm editProduct"><i class="fa fa-pencil-square-o"></i></a>
+                                 <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $content->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct"><i class="fa fa-trash"></i></a>
+                        ';
                 })
                 ->removeColumn('id')
                 ->addIndexColumn()
@@ -54,12 +54,13 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        $tag = new Tag();
-        $tag->name = $request->name;
-        $tag->slug = Str::of($request->name)->slug('-');
-        // dd($category->slug);
-        $tag->save();
-        return $tag;
+        $data = Tag::updateOrCreate(
+            ['id' => $request->id],
+            ['name' => $request->name,
+            'slug' => Str::of($request->name)->slug('-'),
+            ]
+            );
+        return $data;
     }
 
     /**
@@ -79,9 +80,10 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tag $tag)
+    public function edit($id)
     {
-        return $tag;
+        $data = Tag::find($id);
+        return $data;
     }
 
     /**
@@ -94,10 +96,10 @@ class TagController extends Controller
     public function update(Request $request, Tag $tag)
     {
       // dd($request->all());
-        $tag->update($request->all());
-        $tag->slug = Str::of($request->name)->slug('-');
-        $tag->save();
-        return $tag;
+        // $tag->update($request->all());
+        // $tag->slug = Str::of($request->name)->slug('-');
+        // $tag->save();
+        // return $tag;
 
     }
 
@@ -107,9 +109,9 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tag $tag)
+    public function destroy($id)
     {
-        $tag->delete();
+        $data = Tag::find($id)->delete();
         return response()->json(['message', 'deleted success']);
 
     }

@@ -1,11 +1,12 @@
 <?php
 
+use App\Http\Controllers\backend\AnggotaController;
 use App\Http\Controllers\backend\BeritaController;
 use App\Http\Controllers\backend\BusterController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ExampleController;
 use App\Http\Controllers\backend\master_data\TagController;
 use App\Http\Controllers\backend\master_data\KategoriController;
+use App\Http\Controllers\backend\master_data\StrukturController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +26,12 @@ Route::prefix('admin')->group(function () {
     })->name('dashboard');
     // do coding
     Route::resource('berita', BeritaController::class);
+    Route::get('/berita/show/{id}', [BeritaController::class, 'show']);
     Route::resource('tag', TagController::class);
     Route::resource('kategori', KategoriController::class);
     Route::Resource('buster', BusterController::class);
+    Route::Resource('anggota', AnggotaController::class);
+    Route::Resource('struktur', StrukturController::class);
 });
 
 Route::get('/dashboard', function () {
