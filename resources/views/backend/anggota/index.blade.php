@@ -153,13 +153,6 @@
             })
 
         });
-        $('#year').on('change', function (e) {
-                console.log(this.value);
-                sessionStorage.setItem('year', this.value);
-                reloadDatatable();
-                jquery_dataTable.draw();
-                e.preventDefault();
-            });
         $('body').on('click', '.input', function() {
             $('#exampleModalCenterTitle').html("Add anggota");
             $('#dataForm').trigger("reset");
@@ -267,5 +260,13 @@
             });
 
         });
+
+        $('#year').on('change', function (e) {
+                console.log(this.value);
+                sessionStorage.setItem('year', this.value);
+                reloadDatatable();
+                jquery_dataTable.draw();
+                e.preventDefault();
+            });
     </script>
 @endsection

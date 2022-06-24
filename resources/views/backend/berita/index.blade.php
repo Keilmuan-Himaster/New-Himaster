@@ -166,9 +166,9 @@
                 $('#saveBtn').val("edit");
                 $('#exampleModalCenter').modal('show');
                 $('#id').val(data.id);
-                $('#judul').val(data.judul);
-                $('#isi').val(CKEDITOR.instances['content'].setData(data.isi));
-                $('#tag_id').val(data.tag_id);
+                $('#title').val(data.title);
+                $('#body').val(CKEDITOR.instances['content'].setData(data.body));
+                $('#category_id').val(data.category_id);
 
             })
         });

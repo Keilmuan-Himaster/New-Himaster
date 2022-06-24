@@ -53,6 +53,10 @@ class BeritaController extends Controller
                             <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $content->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct"><i class="fa fa-trash"></i></a>
                     ';
                })
+               ->editColumn('body',function ($data){
+                $content = Str::limit($data->body,50);
+                return $content;
+               })
                ->addColumn('status', function ($content) {
                   if ($content->status == true) {
                      return '
@@ -177,6 +181,7 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        $data = Content::find($id);
+        $data = Content::find($id)->delete();
+        return response()->json(['message', 'deleted success']);
     }
 }
