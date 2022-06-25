@@ -36,7 +36,7 @@ class BusterController extends Controller
     }
 
     public function store(Request $request){
-      $tujuan = "buster/";
+      $tujuan = "storage/buster/";
       $nama_foto = time().'_'.pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME).'.webp';
       $gambar = Img::make($request->image)->resize(500, null, function ($constraint) {
          $constraint->aspectRatio();

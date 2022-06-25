@@ -29,11 +29,11 @@
     <link href="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
      {{-- Variables CSS Files. Uncomment your preferred color scheme  --}}
-    {{-- <link href="{{ asset('frontend/assets/css/variables.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('frontend/assets/css/variables.css') }}" rel="stylesheet">
     {{-- <link href="{{asset('frontend/assets/css/variables-blue.css')}}" rel="stylesheet"> --}}
     {{-- <link href="{{asset('frontend/assets/css/variables-green.css')}}" rel="stylesheet"> --}}
     {{-- <link href="{{asset('frontend/assets/css/variables-orange.css')}}" rel="stylesheet"> --}}
-    <link href="{{asset('frontend/assets/css/variables-purple.css')}}" rel="stylesheet">
+    {{-- <link href="{{asset('frontend/assets/css/variables-purple.css')}}" rel="stylesheet"> --}}
     {{-- <link href="{{asset('frontend/assets/css/variables-red.css')}}" rel="stylesheet"> --}}
     {{-- <link href="{{asset('frontend/assets/css/variables-pink.css')}}" rel="stylesheet"> --}}
 

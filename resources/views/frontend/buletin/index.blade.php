@@ -26,10 +26,11 @@
             </div>
 
             <div class="row gy-5">
+                @foreach ($buster as $data)
                 <div class="col-xl-4 col-md-6 d-flex mx-auto" data-aos="zoom-in" data-aos-delay="400">
                     <div class="team-member">
                         <div class="member-img">
-                            <img src="{{ asset('frontend/assets/img/buletin.jpg') }}" class="img-fluid" alt="">
+                            <img src="{{ asset($data->image) }}" class="img-fluid" alt="">
                         </div>
                         <div class="member-info">
                             <div class="social">
@@ -38,45 +39,12 @@
                                 <a href=""><i class="bi bi-instagram"></i></a>
                                 <a href=""><i class="bi bi-linkedin"></i></a>
                             </div>
-                            <h4>Buletin Himaster 1</h4>
-                            <span>Terbit Februari 2021</span>
+                            <h4>{{$data->title}}</h4>
+                            <span>Terbit {{ \Carbon\Carbon::parse($data->created_at)->format('F, Y')}}</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 d-flex mx-auto" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="team-member">
-                        <div class="member-img">
-                            <img src="{{ asset('frontend/assets/img/buletin.jpg') }}" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                            <h4>Buletin Himaster 2</h4>
-                            <span>Terbit Februari 2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 d-flex mx-auto" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="team-member">
-                        <div class="member-img">
-                            <img src="{{ asset('frontend/assets/img/buletin.jpg') }}" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                            <h4>Buletin Himaster 3</h4>
-                            <span>Terbit Februari 2021</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
