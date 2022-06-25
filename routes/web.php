@@ -3,6 +3,8 @@
 use App\Http\Controllers\backend\AnggotaController;
 use App\Http\Controllers\backend\BeritaController;
 use App\Http\Controllers\backend\BusterController;
+use App\Http\Controllers\backend\GaleriController;
+use App\Http\Controllers\backend\KalenderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\master_data\TagController;
 use App\Http\Controllers\backend\master_data\KategoriController;
@@ -33,6 +35,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::Resource('buster', BusterController::class);
     Route::Resource('anggota', AnggotaController::class);
     Route::Resource('struktur', StrukturController::class);
+    Route::Resource('gallery', GaleriController::class);
+    Route::Resource('kalender', KalenderController::class);
+    Route::post('/kalender/create',[KalenderController::class, 'create']);
+    Route::post('/kalender/update',[KalenderController::class, 'update']);
+    Route::post('/kalender/delete',[KalenderController::class, 'destroy']);
 });
 
 // Route::get('/dashboard', function () {
@@ -48,3 +55,4 @@ Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/blog/{slug}', [HomeController::class, 'singleBlog'])->name('single-blog');
 Route::get('/gallery',[HomeController::class, 'gallery'])->name('gallery');
 Route::get('/buletin', [HomeController::class, 'buletin'])->name('buletin');
+Route::get('/kalender', [HomeController::class, 'kalender'])->name('kalender');

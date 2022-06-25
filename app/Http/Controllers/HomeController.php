@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Buster;
+use App\Models\Calendar;
 use App\Models\Content;
+use App\Models\Gallery;
 use App\Models\Member;
 use App\Models\Structure;
 use App\Models\Tag;
+use GMP;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 
@@ -21,7 +24,10 @@ class HomeController extends Controller
         return view('frontend.home.index', $data);
     }
     public function gallery(){
-        return view('frontend.gallery.index');
+        $data['structures'] = Structure::all()->unique('name');
+        // dd($data['structures']);
+        $data['gallery'] = Gallery::all();
+        return view('frontend.gallery.index', $data);
     }
     public function blog(){
         $data['blog'] = Content::orderBy('id','DESC')->paginate(6);
@@ -47,5 +53,17 @@ class HomeController extends Controller
         $data['member'] = Member::where('structure_id', $id)->get();
         $data['structures'] = Structure::find($id);
         return view('frontend.structure.members.index', $data);
+    }
+    public function kalender(){
+        if(request()->ajax())
+        {
+
+         $start = (!empty($_GET["start"])) ? ($_GET["start"]) : ('');
+         $end = (!empty($_GET["end"])) ? ($_GET["end"]) : ('');
+
+         $data = Calendar::whereDate('start', '>=', $start)->whereDate('end',   '<=', $end)->get(['id','title','start', 'end']);
+         return response()->json($data);
+        }
+        return view('frontend.calendar.index');
     }
 }

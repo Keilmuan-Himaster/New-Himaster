@@ -27,7 +27,7 @@
     <link href="{{ asset('frontend/assets/vendor/aos/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-
+    @yield('css')
      {{-- Variables CSS Files. Uncomment your preferred color scheme  --}}
     {{-- <link href="{{ asset('frontend/assets/css/variables.css') }}" rel="stylesheet"> --}}
     {{-- <link href="{{asset('frontend/assets/css/variables-blue.css')}}" rel="stylesheet"> --}}
@@ -69,7 +69,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
-
+    @yield('js')
 </body>
 
 </html>

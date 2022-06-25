@@ -73,7 +73,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="" class='sidebar-link'>
+                            <a href="{{route('gallery.index')}}" class='sidebar-link'>
                                 <i class="bi bi-card-image"></i>
                                 <span>Galeri</span>
                             </a>
@@ -97,7 +97,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="" class='sidebar-link'>
+                            <a href="{{route('kalender.index')}}" class='sidebar-link'>
                                 <i class="bi bi-calendar-day"></i>
                                 <span>Kalender</span>
                             </a>
