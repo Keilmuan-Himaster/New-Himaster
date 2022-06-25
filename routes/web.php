@@ -20,10 +20,10 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
     // example
     Route::get('/dashboard', function () {
-        return view('example.dashboard');
+        return view('backend.dashboard.index');
     })->name('dashboard');
     // do coding
     Route::resource('berita', BeritaController::class);

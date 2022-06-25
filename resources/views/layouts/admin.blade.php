@@ -54,12 +54,9 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item">
-                                    <a href="">Periode</a>
                                     <a href="{{route('tag.index')}}">Tag</a>
                                     <a href="{{route('kategori.index')}}">Kategori</a>
-                                    <a href="">Struktur</a>
-                                    <a href="">Background</a>
-                                    <a href="">Visi Misi</a>
+                                    <a href="{{route('struktur.index')}}">Struktur</a>
                                 </li>
                             </ul>
                         </li>
