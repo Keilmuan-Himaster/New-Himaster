@@ -17,13 +17,11 @@
                 <li><a class="nav-link scrollto" href="{{url('gallery')}}">Galeri</a></li>
                 <li><a class="nav-link scrollto" href="{{url('buletin')}}">BUSTER</a></li>
                 <li><a class="nav-link scrollto" href="{{url('kalender')}}">Kalender</a></li>
-
-                <li><a class="nav-link scrollto" href="http://portal.himaster.id/" target="_blank">Portal Himaster</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav><!-- .navbar -->
 
-        <a class="btn-getstarted scrollto" href="index.html#about">Get Started</a>
+        <a class="btn-getstarted scrollto" href="http://portal.himaster.id/">Portal Himaster</a>
 
     </div>
 </header>

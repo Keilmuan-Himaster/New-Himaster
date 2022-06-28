@@ -267,50 +267,6 @@
             </ul>
 
             <div class="tab-content">
-
-                <div class="tab-pane active show" id="tab-1">
-                    <div class="row gy-4">
-                        <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                            <h3>HIMASTER</h3>
-                            <p class="fst-italic">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ullam ratione architecto
-                                delectus assumenda optio debitis ab magnam eos, impedit veritatis quod nihil praesentium
-                                provident. Voluptatum doloribus odit minus cupiditate? Enim beatae sit, voluptatum maiores,
-                                dicta incidunt non odit tempore vitae a excepturi qui saepe. Molestiae ut sit provident
-                                eligendi maiores blanditiis repellat maxime sequi voluptatem mollitia sint vitae vero quam
-                                dignissimos, omnis ab quas? Soluta magni, fugit alias esse ipsam ad blanditiis quibusdam
-                                voluptatibus iusto, dolor numquam perspiciatis autem excepturi! Incidunt vitae itaque iste
-                                fuga distinctio voluptatem quidem ratione natus aliquam ipsum accusamus nihil labore, aut ex
-                                doloremque eius.
-                            </p>
-                            <ul>
-                                <li><i class="bi bi-check-circle-fill"></i>Lorem, ipsum dolor sit amet consectetur
-                                    adipisicing elit. Rem, tenetur hic maiores ad rerum ducimus molestias voluptates illo
-                                    vitae, temporibus aperiam? Amet saepe fugit iure, quae blanditiis ea necessitatibus
-                                    omnis.</li>
-                                <li><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Nesciunt quae enim, magnam sunt quaerat quibusdam et? Harum sapiente
-                                    aliquid eius incidunt in molestias, corrupti vero reiciendis quibusdam consectetur
-                                    exercitationem totam.</li>
-                                <li><i class="bi bi-check-circle-fill"></i>Lorem, ipsum dolor sit amet consectetur
-                                    adipisicing elit. Atque aut accusantium quia, consectetur soluta fuga tenetur quis et
-                                    eos vel officia dolorum veritatis mollitia in exercitationem suscipit illo velit
-                                    necessitatibus?</li>
-                            </ul>
-                            <p>
-                                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum
-                            </p>
-                        </div>
-                        <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                            <img src="{{ asset('frontend/assets/img/features-1.svg') }}" alt=""
-                                class="img-fluid">
-                        </div>
-                    </div>
-                </div><!-- End Tab Content 1 -->
                 @foreach ($structures as $data)
                     <div class="tab-pane" id="{{ Str::slug($data->name) }}">
                         <div class="row gy-4">
@@ -548,8 +504,7 @@
                     <div class="content px-xl-5">
                         <h3>FAQ</strong></h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                            Pertanyaan yang biasa ditanyakan kepada HIMASTER
                         </p>
                     </div>
 
@@ -560,14 +515,12 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq-content-1">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Non consectetur a erat nam at lectus urna duis?
+                                    Kapan HIMASTER dibentuk?
                                 </button>
                             </h3>
                             <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
-                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
-                                    laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
-                                    rhoncus dolor purus non.
+                                    HIMASTER dibentuk pada tanggal 10 Mei 2009, dimana ketua HIMASTER pertama adalah Muhammad Jumeidi.
                                 </div>
                             </div>
                         </div><!-- # Faq item-->
@@ -577,15 +530,12 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq-content-2">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                                    Apa saja keuntungan menjadi angota HIMASTER ?
                                 </button>
                             </h3>
                             <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                    interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                    scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                    Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                                    Selain bisa belajar bareng pemrograman dan dunia teknologi lainnya, juga belajar berorganisasi, meningkatkan kemampuan public speaking, leadership, kewirausahaan dan masih banyak lagi.
                                 </div>
                             </div>
                         </div><!-- # Faq item-->
@@ -595,15 +545,17 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq-content-3">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                                    Dimana bisa mendapatkan info-info terbaru terkait HIMASTER?
                                 </button>
                             </h3>
                             <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
-                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
-                                    Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
-                                    suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis
-                                    convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                                    Teman-teman bisa nih pantengin terus akun media social Himaster di :
+                                    <br>
+                                    Instagram : @himasterfmipauntan
+                                    <br>
+                                    Website : himaster.id
+
                                 </div>
                             </div>
                         </div><!-- # Faq item-->
@@ -613,38 +565,16 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq-content-4">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                                    Apa aja kegiatan dari HIMASTER?
                                 </button>
                             </h3>
                             <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                 <div class="accordion-body">
                                     <i class="bi bi-question-circle question-icon"></i>
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                    interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                    scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                    Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                                    HIMASTER mempunyai banyak kegiatan yang sangat menarik mulai dari pemrograman, olahraga, Desain Grafis dan masih banyak lagi. yang dilaksanakan dalam bentuk event  keren mulai dari Siskom Cup, Screen, IT Club dan lain-lain.
                                 </div>
                             </div>
                         </div><!-- # Faq item-->
-
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq-content-5">
-                                    <i class="bi bi-question-circle question-icon"></i>
-                                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-                                </button>
-                            </h3>
-                            <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                <div class="accordion-body">
-                                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim
-                                    suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan.
-                                    Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit
-                                    turpis cursus in
-                                </div>
-                            </div>
-                        </div><!-- # Faq item-->
-
                     </div>
 
                 </div>
@@ -657,7 +587,7 @@
     </section><!-- End F.A.Q Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio" data-aos="fade-up">
+    {{-- <section id="portfolio" class="portfolio" data-aos="fade-up">
 
         <div class="container">
 
@@ -844,7 +774,7 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
     <!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
