@@ -34,10 +34,10 @@ class InventarisController extends Controller
                 return view('admin.inventaris.index',compact(['data']));
         }
 
-        $get = Inventaris::all();
-        // $test = InventarisResource::collection($get);
+        // $get = Inventaris::all();
+        $test = InventarisResource::collection(Inventaris::all());
 
-        return response()->json(['success' =>'Data Berhasil Diambil', 'data'=>$get]);
+        return response()->json(['success' =>'Data Berhasil Diambil', 'data'=>$test]);
     }
 
     /**
