@@ -4,6 +4,7 @@ use App\Http\Controllers\backend\AnggotaController;
 use App\Http\Controllers\backend\BeritaController;
 use App\Http\Controllers\backend\BusterController;
 use App\Http\Controllers\backend\GaleriController;
+use App\Http\Controllers\backend\InventarisController;
 use App\Http\Controllers\backend\KalenderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\master_data\TagController;
@@ -37,6 +38,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::Resource('struktur', StrukturController::class);
     Route::Resource('gallery', GaleriController::class);
     Route::Resource('kalender', KalenderController::class);
+    Route::Resource('inventaris', InventarisController::class);
     Route::post('/kalender/create',[KalenderController::class, 'create']);
     Route::post('/kalender/update',[KalenderController::class, 'update']);
     Route::post('/kalender/delete',[KalenderController::class, 'destroy']);

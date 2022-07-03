@@ -79,7 +79,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="" class='sidebar-link'>
+                            <a href="{{route('anggota.index')}}" class='sidebar-link'>
                                 <i class="bi bi-person-fill"></i>
                                 <span>Anggota</span>
                             </a>
@@ -91,7 +91,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="" class='sidebar-link'>
+                            <a href="{{route('inventaris.index')}}" class='sidebar-link'>
                                 <i class="bi bi-book"></i>
                                 <span>Inventaris Himaster</span>
                             </a>
