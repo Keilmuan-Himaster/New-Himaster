@@ -31,6 +31,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     // do coding
     Route::resource('berita', BeritaController::class);
     Route::get('/berita/show/{id}', [BeritaController::class, 'show']);
+    Route::get('berita/gambar/delete/{id}', [BeritaController::class, 'show']);
     Route::resource('tag', TagController::class);
     Route::resource('kategori', KategoriController::class);
     Route::Resource('buster', BusterController::class);

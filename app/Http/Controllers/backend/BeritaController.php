@@ -5,10 +5,12 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Content;
+use App\Models\File;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File as fl;
 use Intervention\Image\Facades\Image as Img;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -183,5 +185,12 @@ class BeritaController extends Controller
     {
         $data = Content::find($id)->delete();
         return response()->json(['message', 'deleted success']);
+    }
+    public function deleteGambar($id){
+        $data = File::find($id);
+        // unlink('storage/berita'.$data->nama);
+        File::where('id', $id)->delete();
+        fl::delete($data->link);
+        return back()->with("success", "Image deleted successfully.");
     }
 }
