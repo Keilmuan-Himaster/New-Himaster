@@ -145,9 +145,7 @@ class BeritaController extends Controller
         $get = Content::find($id);
         // dd($get);
         $data = $get->files;
-        // $data = Gambar::where('gambars_id',$id)->where('gambars_type', 'App\Models\Berita')->get();
-        // dd($data);
-        $title = $get->judul;
+        $title = $get->title;
         return view('backend.berita.gambar', compact(['data','title']));
     }
 
