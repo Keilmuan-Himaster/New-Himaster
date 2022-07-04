@@ -35,7 +35,7 @@ class AnggotaController extends Controller
             ->addColumn('image', function ($member) {
                if (count($member->files) > 0) {
                   return '
-            <img height="200px" src="' . asset('storage/' . $member->files->first()->link) . '">
+            <img height="200px" src="' . asset('storage/' . $member->files->last()->link) . '">
                      ';
                } else {
                   return '';

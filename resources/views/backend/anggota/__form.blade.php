@@ -5,19 +5,19 @@
         <div class="form-group">
             <div class="form-line">
                <label for="name">Nama</label>
-               <input type="text" id="name" name="name" class="form-control" required>
+               <input type="text" name="name" id="name"  class="form-control" required>
             </div>
          </div>
          <div class="form-group">
             <div class="form-line">
-               <label for="name">NIM</label>
-               <input type="text" id="nim" name="nim" class="form-control" required>
+               <label for="nim">NIM</label>
+               <input type="text" name="nim" id="nim" class="form-control" required>
             </div>
          </div>
          <div class="form-group">
             <div class="form-line">
-               <label for="name">Prodi</label>
-               <input type="text" name="majors" class="form-control" required>
+               {{-- <label for="majors">Prodi</label> --}}
+               <input type="hidden" name="majors" id="majors" class="form-control" required value="Rekayasa Sistem Komputer">
             </div>
          </div>
          <div class="form-group">

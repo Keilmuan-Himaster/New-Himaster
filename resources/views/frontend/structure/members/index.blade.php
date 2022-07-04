@@ -4,11 +4,6 @@
 <section id="team" class="team">
     <div class="container" data-aos="fade-up">
 
-        <div class="section-header">
-            <h2>{{$structures->name}} Himaster</h2>
-            <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam
-                voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
-        </div>
         <div class="row gy-5">
             @foreach ($member as $data)
             <div class="col-xl-4 col-md-6 d-flex mx-auto" data-aos="zoom-in" data-aos-delay="400">

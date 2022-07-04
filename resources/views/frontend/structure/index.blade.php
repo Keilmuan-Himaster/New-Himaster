@@ -6,11 +6,6 @@
     <section id="services" class="services">
         <div class="container" data-aos="fade-up">
 
-            <div class="section-header">
-                <h2>Struktur Himaster</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, obcaecati.</p>
-            </div>
-
             <div class="row gy-5">
                 @foreach ($structures as $data)
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">

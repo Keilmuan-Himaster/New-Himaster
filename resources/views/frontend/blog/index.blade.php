@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="read-more mt-auto align-self-end">
-                      <a href="{{url('blog/',$data->slug)}}">Read More</a>
+                      <a href="{{url('blog',$data->slug)}}">Read More</a>
                     </div>
 
                   </article>
