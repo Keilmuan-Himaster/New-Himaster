@@ -33,12 +33,6 @@
                                 <img src="{{ asset($data->image) }}" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
                                 <h4>{{$data->title}}</h4>
                                 <span>Terbit {{ \Carbon\Carbon::parse($data->created_at)->format('F, Y')}}</span>
                             </div>
