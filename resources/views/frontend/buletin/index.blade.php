@@ -24,11 +24,10 @@
                 <h2>Buletin Himaster</h2>
                 <p>Buletin Himaster atau yang disingkat BUSTER adalah publikasi yang mengangkat perkembangan suatu topik atau aspek tertentu dan diterbitkan/ dipublikasikan secara teratur (berkala) dalam waktu yang relatif singkat (harian hingga bulanan). Buletin ditujukan kepada khalayak yang lebih sempit, yang berkaitan dengan bidang tertentu saja.</p>
             </div>
-
             <div class="row gy-5">
                 @foreach ($buster as $data)
-                <a href="{{$data->link}}" target="_blank">
-                    <div class="col-xl-4 col-md-6 d-flex mx-auto" data-aos="zoom-in" data-aos-delay="400">
+                <div class="col-xl-4 col-md-6 d-flex mx-auto" data-aos="zoom-in" data-aos-delay="400">
+                        <a href="{{$data->link}}" target="_blank">
                         <div class="team-member">
                             <div class="member-img">
                                 <img src="{{ asset($data->image) }}" class="img-fluid" alt="">
@@ -44,8 +43,8 @@
                                 <span>Terbit {{ \Carbon\Carbon::parse($data->created_at)->format('F, Y')}}</span>
                             </div>
                         </div>
+                    </a>
                     </div>
-                </a>
                 @endforeach
             </div>
         </div>
