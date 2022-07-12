@@ -59,6 +59,3 @@ Route::get('/blog/{slug}', [HomeController::class, 'singleBlog'])->name('single-
 Route::get('/gallery',[HomeController::class, 'gallery'])->name('gallery');
 Route::get('/buletin', [HomeController::class, 'buletin'])->name('buletin');
 Route::get('/kalender', [HomeController::class, 'kalender'])->name('kalender');
-Route::get('/test', function (){
-    return view('frontend.buletin.single-page.index');
-});
