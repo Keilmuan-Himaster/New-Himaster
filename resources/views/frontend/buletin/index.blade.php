@@ -27,23 +27,25 @@
 
             <div class="row gy-5">
                 @foreach ($buster as $data)
-                <div class="col-xl-4 col-md-6 d-flex mx-auto" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="team-member">
-                        <div class="member-img">
-                            <img src="{{ asset($data->image) }}" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="{{$data->link}}" target="_blank">
+                    <div class="col-xl-4 col-md-6 d-flex mx-auto" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="team-member">
+                            <div class="member-img">
+                                <img src="{{ asset($data->image) }}" class="img-fluid" alt="">
                             </div>
-                            <h4>{{$data->title}}</h4>
-                            <span>Terbit {{ \Carbon\Carbon::parse($data->created_at)->format('F, Y')}}</span>
+                            <div class="member-info">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                                <h4>{{$data->title}}</h4>
+                                <span>Terbit {{ \Carbon\Carbon::parse($data->created_at)->format('F, Y')}}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 @endforeach
             </div>
         </div>
