@@ -196,18 +196,18 @@
                 $('#saveBtn').val("edit");
                 $('#exampleModalCenter').modal('show');
                 $('#id').val(data.id);
-                $('#name').val(result.name);
-                $('#address').val(result.address);
-                $('#year').val(result.year);
-                $('#majors').val(result.majors);
-                $('#nim').val(result.nim);
+                $('#name').val(data.name);
+                $('#address').val(data.address);
+                $('#year').val(data.year);
+                $('#majors').val(data.majors);
+                $('#nim').val(data.nim);
                 $("#structure option").filter(function () {
-                    return $.trim($(this).val()) == result.structure_id
+                    return $.trim($(this).val()) == data.structure_id
                 }).prop('selected', true);
                 $('.struc').selectpicker('refresh')
                 $("#grade option").filter(function () {
 
-                    return $.trim($(this).val()) == capitalize(result.grade)
+                    return $.trim($(this).val()) == capitalize(data.grade)
                 }).prop('selected', true);
                 $('.grade').selectpicker('refresh');
             })
