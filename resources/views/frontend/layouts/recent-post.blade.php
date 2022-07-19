@@ -9,7 +9,7 @@
             @break
             @endforeach
             <div>
-                <h4><a href="blog-post.html">{{$data->title }}</a></h4>
+                <h4><a href="{{url('blog/'.$data->slug)}}">{{$data->title }}</a></h4>
                 <time datetime="2020-01-01">{{\Carbon\Carbon::parse($data->created_at)->format('j F, Y') }}</time>
             </div>
         </div><!-- End recent post item-->
