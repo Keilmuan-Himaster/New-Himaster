@@ -10,8 +10,10 @@
                 <div class="team-member">
                     <div class="member-img">
                         @if (isset($data->files->last()->link))
+                        <center>
+                            <img src="{{ asset('storage/'.$data->files->last()->link) }}" class="img-fluid" alt="">
 
-                        <img src="{{ asset('storage/'.$data->files->last()->link) }}" class="img-fluid" alt="">
+                        </center>
                         @else
                         <img src="{{asset('frontend/assets/img/team/team-1.jpg')}}" class="img-fluid" alt="">
 
