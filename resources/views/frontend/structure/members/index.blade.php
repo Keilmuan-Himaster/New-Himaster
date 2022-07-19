@@ -9,7 +9,13 @@
             <div class="col-xl-4 col-md-6 d-flex mx-auto" data-aos="zoom-in" data-aos-delay="400">
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="{{ asset('frontend/assets/img/reza.jpg') }}" class="img-fluid" alt="">
+                        @if (isset($data->files->last()->link))
+
+                        <img src="{{ asset('storage/'.$data->files->last()->link) }}" class="img-fluid" alt="">
+                        @else
+                        <img src="{{asset('frontend/assets/img/team/team-1.jpg')}}" class="img-fluid" alt="">
+
+                        @endif
                     </div>
                     <div class="member-info">
                         <div class="social">
