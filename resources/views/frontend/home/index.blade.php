@@ -203,12 +203,10 @@
                                     {{ $data->description }}
                                 </p>
                             </div>
-                            @foreach ($data->files as $files)
                                 <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up"
                                     data-aos-delay="200">
-                                    <img src="{{ asset('storage/' . $files->link) }}" alt="" class="img-fluid">
+                                    <img src="{{ asset('storage/' . $data->files->last()->link) }}" alt="" class="img-fluid">
                                 </div>
-                            @endforeach
                         </div>
                     </div><!-- End Tab Content 1 -->
                 @endforeach
