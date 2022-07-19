@@ -34,8 +34,9 @@ class StrukturController extends Controller
             return DataTables::of($structures)
             ->addColumn('image', function ($structure) {
                if(count($structure->files)>0){
+
                   return '
-               <img height="200px" src="'.asset('storage/'.$structure->files->first()->link).'">
+                        <img height="200px" width="200px" src="'.asset('storage/'.$structure->files->last()->link).'">
                         ';
                }else{
                   return'';

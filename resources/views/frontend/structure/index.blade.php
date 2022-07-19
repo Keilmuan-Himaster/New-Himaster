@@ -11,10 +11,7 @@
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                     <div class="service-item">
                         <div class="img">
-                            @foreach ($data->files as $file)
-                            <img src="{{ asset('storage/'.$file->link) }}" class="img-fluid" alt="">
-
-                            @endforeach
+                            <img src="{{ asset('storage/'.$data->files->last()->link) }}" class="img-fluid" alt="">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">

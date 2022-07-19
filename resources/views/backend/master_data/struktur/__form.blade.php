@@ -5,26 +5,26 @@
         <div class="form-group">
             <div class="form-line">
                <label for="name">Name</label>
-               <input type="text" name="name" class="form-control" required>
+               <input type="text" id="name" name="name" class="form-control" required>
             </div>
          </div>
 
          <div class="form-group">
              <div class="form-line">
-                 <label for="number">Year</label>
-                 <input type="number" name="year" class="form-control">
+                 <label for="year">Year</label>
+                 <input type="text" id="year" name="year" class="form-control">
              </div>
          </div>
          <div class="form-group">
             <div class="form-line">
-                <label for="number">Logo</label>
+                <label for="image">Logo</label>
                 <input type="file" name="image" class="form-control" >
             </div>
          </div>
          <div class="form-group">
             <div class="form-line">
-                <label for="number">Description</label>
-                <textarea id="des" name="description" class="form-control"></textarea>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" class="form-control"></textarea>
             </div>
          </div>
         <div class="modal-footer">
