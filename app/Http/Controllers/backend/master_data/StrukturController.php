@@ -91,11 +91,11 @@ class StrukturController extends Controller
     );
     $path = null;
     if ($request->file('image')) {
-        $name_picture = Str::random(6) . '.png';
+        $name_picture = Str::random(6) . '.webp';
         $picture = Image::make($request['image'])->resize(null, 300, function ($constraint) {
             $constraint->aspectRatio();
             $constraint->upsize();
-        })->encode('png', 100);
+        })->encode('webp', 100);
         $namePath = "structures";
         $path = $namePath . "/" . $name_picture;
 

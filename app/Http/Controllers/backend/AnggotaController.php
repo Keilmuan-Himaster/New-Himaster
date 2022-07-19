@@ -102,11 +102,12 @@ class AnggotaController extends Controller
             ]
         );
         if ($request->file('image')) {
-           $name_picture = Str::random(6) . '.png';
-           $picture = Image::make($request['image'])->resize(null, 300, function ($constraint) {
+           $name_picture = Str::random(6) . '.webp';
+           $picture = Image::make($request['image'])->orientate()->resize(null, 300, function ($constraint) {
               $constraint->aspectRatio();
               $constraint->upsize();
-           })->encode('png', 100);
+           })->encode('webp', 100);
+        //    $picture->orientate();
            $namePath = "members";
            $path = $namePath . "/" . $name_picture;
 
