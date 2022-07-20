@@ -12,7 +12,8 @@
     <!-- Favicons -->
     <link href="{{ asset('frontend/assets/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('frontend/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8325553851950498"
+    crossorigin="anonymous"></script>
     <link rel="icon" href="{{ asset('img/HIMASTER.ico') }}" type="image/x-icon">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,6 +71,7 @@
     <!-- Template Main JS File -->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
     @yield('js')
+
 </body>
 
 </html>

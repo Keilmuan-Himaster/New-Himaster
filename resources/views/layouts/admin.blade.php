@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <link rel="shortcut icon" href="{{ asset('img/HIMASTER.ico') }}" type="image/x-icon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8325553851950498"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -146,6 +148,7 @@
     <script src="{{ asset('assets/vendors/sweetalert2/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('assets/vendors/fontawesome/all.min.js') }}"></script>
     <script src="{{ asset('assets/js/mazer.js') }}"></script>
+
 </body>
 
 </html>
