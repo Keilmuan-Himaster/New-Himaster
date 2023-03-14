@@ -382,7 +382,7 @@
                         </div>
                         <h3 class="post-title">{{ $data->title }}</h3>
                         <p>{!! Str::limit($data->body, 50, $end = '...') !!}</p>
-                        <a href="blog-details.html" class="readmore stretched-link"><span>Selengkapnya</span><i
+                        <a href="{{url('blog/'.$data->slug)}}" class="readmore stretched-link"><span>Selengkapnya</span><i
                                 class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
