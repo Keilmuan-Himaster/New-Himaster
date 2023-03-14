@@ -6,11 +6,15 @@ use App\Http\Controllers\backend\BusterController;
 use App\Http\Controllers\backend\GaleriController;
 use App\Http\Controllers\backend\InventarisController;
 use App\Http\Controllers\backend\KalenderController;
+use App\Http\Controllers\backend\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\master_data\TagController;
 use App\Http\Controllers\backend\master_data\KategoriController;
 use App\Http\Controllers\backend\master_data\StrukturController;
+use App\Http\Controllers\backend\presensi\KegiatanController;
+use App\Http\Controllers\backend\presensi\KodeController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PresenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +44,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::Resource('gallery', GaleriController::class);
     Route::Resource('kalender', KalenderController::class);
     Route::Resource('inventaris', InventarisController::class);
+    Route::Resource('mahasiswa', MahasiswaController::class);
+    Route::Resource('kegiatan', KegiatanController::class);
+    Route::Resource('kode', KodeController::class);
     Route::post('/kalender/create',[KalenderController::class, 'create']);
     Route::post('/kalender/update',[KalenderController::class, 'update']);
     Route::post('/kalender/delete',[KalenderController::class, 'destroy']);
@@ -59,3 +66,6 @@ Route::get('/blog/{slug}', [HomeController::class, 'singleBlog'])->name('single-
 Route::get('/gallery',[HomeController::class, 'gallery'])->name('gallery');
 Route::get('/buletin', [HomeController::class, 'buletin'])->name('buletin');
 Route::get('/kalender', [HomeController::class, 'kalender'])->name('kalender');
+Route::get('test', fn () => phpinfo());
+Route::resource('/presensi',PresenceController::class);
+Route::post('/presensi/addevent',[PresenceController::class, 'addEvent'])->name('presensi.addEvent');

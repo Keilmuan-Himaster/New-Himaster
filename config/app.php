@@ -177,6 +177,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
 
         Yajra\DataTables\DataTablesServiceProvider::class,
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
     ],
 
@@ -236,7 +238,8 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
 
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
-
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class
     ],
 
 ];

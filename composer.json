@@ -13,6 +13,8 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "rahulhaque/laravel-filepond": "^1.6",
+        "realrashid/sweet-alert": "^5.1",
+        "simplesoftwareio/simple-qrcode": "^4.2",
         "sopamo/laravel-filepond": "^0.6.2",
         "yajra/laravel-datatables-oracle": "^9.19"
     },

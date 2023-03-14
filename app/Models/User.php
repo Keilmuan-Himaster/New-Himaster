@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'nim',
         'password',
     ];
 
@@ -41,4 +42,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function event(){
+        return $this->belongsToMany(Event::class)->using(EventUser::class);
+    }
+    public function code(){
+        return $this->belongsToMany(Code::class);
+    }
+    public function data(){
+        return $this->hasMany(Data::class);
+    }
 }

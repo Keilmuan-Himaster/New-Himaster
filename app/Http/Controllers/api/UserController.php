@@ -20,16 +20,16 @@ class UserController extends Controller
     {
         try {
             $request->validate([
-                'email' => 'email|required',
+                'nim' => 'required',
                 'password' => 'required',
             ]);
-            $credentials = request(['email','password']);
+            $credentials = request(['nim','password']);
 
             if(!Auth::attempt($credentials)){
                 return response()->json(['error'=>'Unauthorized','status'=>500]);
             }
 
-            $user = User::where('email', $request['email'])->first();
+            $user = User::where('nim', $request['nim'])->first();
             // dd($user);
 
             if(!Hash::check($request['password'],$user->password, [])) {
